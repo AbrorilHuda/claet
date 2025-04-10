@@ -31,4 +31,9 @@ export class UserController {
       },
     });
   }
+
+  @Get('/get-cookie')
+  getCookie(@Req() request: Request): string {
+    return `Judul buku dari blog ${request.cookies['title']}`;
+  }
 }
